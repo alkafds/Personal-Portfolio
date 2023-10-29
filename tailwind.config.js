@@ -24,7 +24,7 @@ export default {
         '4x1': '2rem',
       },
       backgroundImage: {
-        'my-background': "url('./bg1.jpg')",
+        'my-background': "url('https://i.ibb.co/zN7M4GN/bg1.jpg')",
       },
   },
   plugins:[],
