@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import profilepic from "../assets/profilepic.jpg";
-import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
+import { AiOutlineCaretLeft, AiOutlineCaretRight } from "react-icons/ai"; // Updated icons
 import { useNavigate } from "react-router-dom";
-import { FaReact, FaNode, FaHtml5, FaCss3, FaJs } from "react-icons/fa"; // Import icons for example
 
 function Bio() {
   const navigate = useNavigate();
@@ -15,15 +14,15 @@ function Bio() {
     return () => clearTimeout(timeout);
   }, []);
 
-  const handleArrowDown = () => {
+  const handleArrowRight = () => {
     navigate('/education');
   }
 
-  const handleArrowUp = () => {
+  const handleArrowLeft = () => {
     navigate('/');
   }
 
-  const heading = "My name is Alka Fadilla Syarief.";
+  const heading = "About Me";
   const summaryText =
     "I am a Korean Language Education graduate, a tech enthusiast, and a frontend developer.\n" +
     "Since middle school, I have been highly interested in tech. " +
@@ -32,7 +31,6 @@ function Bio() {
     "Carrying a bachelor degree in Korean Language Education and a web developer certificate, \n" +
     "I'm confident I can be a proficient web developer. ";
 
-  // Replace \n with <br /> to format line breaks
   const formattedSummary = summaryText.split("\n").map((text, index) => (
     <React.Fragment key={index}>
       {text}
@@ -43,27 +41,27 @@ function Bio() {
   const pageClass = pageOpen ? "open-page" : "closed-page";
 
   return (
-    <div className={`flex flex-col bg-navy w-full h-full p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 text-center text-black ${pageClass}`}>
-      <div className="absolute top-[80px] left-1/2 transform -translate-x-1/2">
-        <AiFillCaretUp className="icon" onClick={handleArrowUp} />
+    <div className={`flex flex-col bg-my-background bg-cover bg-center w-screen h-screen p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 text-center text-black ${pageClass}`}>
+      <div className="absolute top-1/2 transform -translate-y-1/2 left-2">
+        <AiOutlineCaretLeft className="icon" onClick={handleArrowLeft} /> 
       </div>
       <div className="pt-[80px]">
-        <div className={`flex flex-col items-center transition-opacity duration-1000 ease-in-out ${pageOpen ? "opacity-100" : "opacity-0"}`}>
+        <div className="flex flex-col items-center">
           <div className="mb-6">
             <img
               src={profilepic}
               alt="Profile"
-              className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 rounded-full"
+              className={`w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 shadow-xl rounded-full slide-in ${pageOpen ? "slide" : ""} `}
             />
           </div>
           <div className="mb-6 text-left w-[900px]">
-            <h1 className="md:text-3xl sm:text-xl text-center font-semibold text-white mb-4">{heading}</h1>
-            <p className="md:text-lg text-center text-white">{formattedSummary}</p>
+            <h1 className={`md:text-3xl sm:text-xl text-center font-semibold text-white mb-4 slide-in-sec ${pageOpen ? "slide-sec" : ""}`}>{heading}</h1>
+            <p className={`bg-mint bg-opacity-20 backdrop-blur-lg rounded-2xl border border-mint p-4 shadow-2xl md:text-lg text-center text-white slide-in-thi ${pageOpen ? "slide-thi" : ""}`}>{formattedSummary}</p>
           </div>
         </div>
       </div>
-      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2">
-        <AiFillCaretDown className="icon" onClick={handleArrowDown} />
+      <div className="absolute top-1/2 transform -translate-y-1/2 right-2">
+        <AiOutlineCaretRight className="icon" onClick={handleArrowRight} /> {/* Updated arrow icon */}
       </div>
     </div>
   );

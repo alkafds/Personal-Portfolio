@@ -1,19 +1,10 @@
 import React from "react";
 
-function WorkExperienceCard() {
-  const company = ["Core Initiative x Rakamin Academy"];
-  const position = ["Project-Based Virtual Intern"];
-  const startDate = ["Sep 2023"];
-  const endDate = ["Sep 2023"];
-  const tasks = [
-    "Frontend Development using Vue.js, Deployment (CI/CD) and Unit testing using Jest",
-  ];
-
+function WorkExperienceCard({ company, position, startDate, endDate, tasks }) {
   return (
-    <div className="bg-white text-navy p-4 flex border border-white my-10 rounded-xl shadow-xl">
-      <div className="text-2xl font-bold text-left">{company}</div>
-      <div className="border-t border-white my-2"></div>
-      <div className="paragraph">
+    <div className="glass-card bg-mint bg-blur bg-opacity-20 backdrop-blur-lg border flex w-full h-full border-mint text-white p-4 flex my-4 rounded-xl shadow-xl">
+      <div className="text-2xl font-bold text-left w-[500px]">{company}</div>
+      <div className="paragraph ml-10 w-[500px]">
         <p className="text-left">
           <span className="font-semibold text-left">Position:</span> {position}
         </p>
@@ -21,8 +12,7 @@ function WorkExperienceCard() {
           <span className="font-semibold">Date:</span> {startDate} - {endDate}
         </p>
       </div>
-      <div className="border-t border-white my-2"></div>
-      <div className="paragraph">
+      <div className="paragraph ml-10 w-full">
         <p className="font-semibold text-left">Tasks:</p>
         <p className="text-left">{tasks}</p>
       </div>

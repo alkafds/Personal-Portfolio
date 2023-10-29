@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
+import { AiOutlineCaretLeft, AiOutlineCaretRight } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import MAIN from "../assets/MAIN.png";
 import REG from "../assets/REG.png";
 import LOG from "../assets/LOG.png";
@@ -23,38 +23,39 @@ function Projects() {
     return () => clearTimeout(timeout);
   }, []);
 
-  const handleArrowUp = () => {
+  const handleArrowLeft = () => {
     navigate("/experiences");
   };
 
-  const handleArrowDown = () => {
-    navigate("/projects");
-  };
 
   const pageClass = pageOpen ? "open-page" : "closed-page";
 
   return (
     <div
-      className={`flex flex-col bg-navy w-full h-full p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 text-center text-white ${pageClass}`}
+      className={`flex flex-col bg-my-background bg-center bg-cover w-screen h-screen sm:h-full p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 text-center text-white ${pageClass}`}
     >
       <div
         className={`transition-opacity duration-1000 ease-in-out ${
           pageOpen ? "opacity-100" : "opacity-0"
         }`}
       >
-        <h1 className="text-4xl font-bold mt-20">My Projects</h1>
-        <div className="mt-20 flex flex-row">
+        <h1 className={`text-4xl font-bold mt-20 slide-in ${pageOpen ? "slide" : ""} `}>My Projects</h1>
+        <div className={`glass-card bg-teal bg-opacity-20 backdrop-blur-md  border border-mint shadow-xl rounded-2xl mt-4 flex md:flex-row sm:flex-col slide-in ${pageOpen ? "slide" : ""} `}>
         <div className="mt-4 flex flex-col">
         
           <div className="w-50 px-4">
-            <h2 className="text-2xl font-bold text-left">BakatLacak</h2>
-            <p className="text-md text-left">
+            <h2 className={`text-2xl font-bold text-left slide-in-sec ${pageOpen ? "slide-sec" : ""} `}>BakatLacak</h2>
+            <p className={`text-md text-left slide-in-sec ${pageOpen ? "slide-sec" : ""} `}>
               Jobseeker website made for final project during Rakamin Academy
-              Fullstack Development Bootcamp
+              Fullstack Development Bootcamp.
+            </p>
+            <p className="text-md text-left">
+              I contributed to both the backend and frontend development. 
+              I made controllers for the backend, and then login page, register page, and overall styling for the frontend.
             </p>
           </div>
           <div className="bg-transparent text-white p-4 flex flex-col">
-            <div className="grid grid-cols-4 gap-2">
+            <div className={`grid grid-cols-4 grid-row-2 gap-2 slide-in-sec ${pageOpen ? "slide-sec" : ""} `}>
               <p className="text-left">
                 <span className="font-semibold text-left mr-[150px]">Date:</span>
               </p>
@@ -65,12 +66,11 @@ function Projects() {
                 <span className="font-semibold text-left mr-[150px]">Repository:</span>
               </p>
               <p className="text-left mx-0">
-                <a href="https://github.com/Bakat-Lacak" className="underline underline-offset-4 text-teal">Click here</a>
+                <a href="https://github.com/Bakat-Lacak" className="underline underline-offset-4 text-navy">Click here</a>
               </p>
             </div>
-            <div className="border-t border-white my-6"></div>
-              <p className="font-semibold text-left">Stacks used:</p>
-              <div className="text-left ml-[25px] grid grid-cols-5 gap-4">
+              <p className={`font-semibold text-left mt-4 slide-in-thi ${pageOpen ? "slide-thi" : ""} `}>Stacks used:</p>
+              <div className={`text-left ml-[25px] grid grid-cols-5 gap-4 slide-in-thi ${pageOpen ? "slide-thi" : ""} `}>
                 <FaNode className="proj-icon"/>
                 <SiExpress className="proj-icon"/>
                 <SiJsonwebtokens className="proj-icon"/>
@@ -84,13 +84,12 @@ function Projects() {
               </div>
           </div>
           </div>
-          <div className="w-1/2 p-4">
+          <div className="w-1/2 p-4 mt-4 items-center">
             <Carousel
               showArrows={true}
               showThumbs={false}
-              width="600px" // Adjust the width as needed
-              infiniteLoop={true} // Prevent looping to the first slide
-              
+              width={"580px"}// Width for carousel is set above.
+              infiniteLoop={true} // Loop to first slide.
             >
               <div>
                 <img src={MAIN} alt="MAIN" className="w-128 h-105" />
@@ -109,11 +108,8 @@ function Projects() {
         </div>
         
       </div>
-      <div className="absolute top-[80px] left-1/2 transform -translate-x-1/2">
-        <AiFillCaretUp className="icon" onClick={handleArrowUp} />
-      </div>
-      <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 translate-y-[70px] mb-[10px]">
-        <AiFillCaretDown className="icon" onClick={handleArrowDown} />
+      <div className="absolute top-1/2 transform -translate-y-1/2 left-2">
+        <AiOutlineCaretLeft className="icon" onClick={handleArrowLeft} />
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
+import { AiOutlineCaretLeft, AiOutlineCaretRight } from "react-icons/ai";
 import { LuSchool, LuSchool2 } from "react-icons/lu";
 import { FaTools } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -16,48 +16,51 @@ function Education() {
     return () => clearTimeout(timeout);
   }, []);
 
-  const handleArrowUp = () => {
+  const handleArrowLeft = () => {
     navigate("/bio");
   };
 
-  const handleArrowDown = () => {
-    navigate("/experiences");
+  const handleArrowRight = () => {
+    navigate("/skills");
   };
 
   const pageClass = pageOpen ? "open-page" : "closed-page";
 
   return (
-    <div className={`flex flex-col bg-gradient-to-b from-navy from-45% to-teal w-full h-screen  p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 text-center text-white ${pageClass}`}>
-      <div className={`transition-opacity duration-1000 ease-in-out ${pageOpen ? "opacity-100" : "opacity-0"}`}>
-        <h1 className="text-4xl font-bold mt-20">My Education</h1>
+    <div className={`flex flex-col bg-my-background bg-cover bg-center w-screen h-screen p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 text-center text-white ${pageClass}`}>
+      <div className="absolute top-1/2 transform -translate-y-1/2 left-2">
+        <AiOutlineCaretLeft className="icon" onClick={handleArrowLeft} /> 
+      </div>
+      <div className={`duration-1000`}>
+        <h1 className={`text-4xl font-bold mt-20 slide-in ${pageOpen ? "slide" : ""} `}>My Education</h1>
         <div className="mt-[100px] flex flex-row justify-center">
           <ul className="list-none flex flex-row md:space-x-[190px] sm:space-x-[150px]">
-            <li className="card ">
+            <li className={`card bg-white bg-opacity-30 backdrop-blur-lg border border-mint shadow-xl duration-1000 slide-in-sec ${pageOpen ? "slide-sec" : ""}`}>
               <LuSchool className="icon" />
             </li>
-            <li className="card">
+            <li className={`card bg-white bg-opacity-30 backdrop-blur-lg border border-mint shadow-xl duration-1000 slide-in-sec ${pageOpen ? "slide-sec" : ""}`}>
               <LuSchool2 className="icon" />
             </li>
-            <li className="card">
+            <li className={`card bg-white bg-opacity-30 backdrop-blur-lg border border-mint shadow-xl duration-1000 slide-in-sec ${pageOpen ? "slide-sec" : ""}`}>
               <FaTools className="icon" />
             </li>
           </ul>
         </div>
         <div className="mt-4 flex flex-row justify-center">
-          <ul className="list-none flex flex-row md:space-x-[85px] sm:space-x-[85px]">
+          <ul className={`list-none flex flex-row md:space-x-[55px] sm:space-x-[85px] slide-in-thi ${pageOpen ? "slide-thi" : ""} `}>
             <li className="info">
-              <p className="text-white text-center font-bold">SMA Alfa Centauri</p>
+              <p className="text-white text-center font-bold text-lg">SMA Alfa Centauri</p>
             </li>
             <li className="info">
-              <p className="text-white text-center font-bold">Universitas Pendidikan Indonesia</p>
+              <p className="text-white text-center font-bold text-lg">Universitas Pendidikan Indonesia</p>
             </li>
             <li className="info">
-              <p className="text-white text-center font-bold">Rakamin Academy</p>
+              <p className="text-white text-center font-bold text-lg">Rakamin Academy</p>
             </li>
           </ul>
         </div>
-        <div className="mt-4 flex flex-row justify-center">
-          <ul className="list-none flex flex-row md:space-x-[90px] sm:space-x-[80px]">
+        <div className="mt-2 flex flex-row justify-center">
+          <ul className={`list-none flex flex-row md:space-x-[90px] sm:space-x-[80px] slide-in-thi ${pageOpen ? "slide-thi" : ""} `}>
             <li className="info">
               <p className="text-white text-center italic md:ml-12 sm:ml-6">Social Science</p>
             </li>
@@ -69,11 +72,8 @@ function Education() {
             </li>
           </ul>
         </div>
-        <div className="absolute top-[80px] left-1/2 transform -translate-x-1/2">
-          <AiFillCaretUp className="icon" onClick={handleArrowUp} />
-        </div>
-        <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2">
-          <AiFillCaretDown className="icon" onClick={handleArrowDown} />
+        <div className="absolute top-1/2 transform -translate-y-1/2 right-2">
+          <AiOutlineCaretRight className="icon" onClick={handleArrowRight} />
         </div>
       </div>
     </div>

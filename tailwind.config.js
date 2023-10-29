@@ -9,10 +9,10 @@ export default {
       xl: '1440px',
     },
     colors: {
-      'black': '#001c30',
-      'navy': '#176b87',
+      'black': '#040D12',
+      'navy': '#183D3D',
       'teal': '#64ccc5',
-      'mint': '#dafffb',
+      'mint': '#93B1A6',
       'white': '#ffffff',
     },
     extend: {
@@ -22,6 +22,9 @@ export default {
       },
       borderRadius: {
         '4x1': '2rem',
+      },
+      backgroundImage: {
+        'my-background': "url('./src/assets/bg1.jpg')",
       },
   },
   plugins:[],

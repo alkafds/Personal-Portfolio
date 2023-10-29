@@ -2,19 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  background-color: #001c30 ;
-}
-
 .menu-item {
+  font-size: 24px;
   transition: transform 0.2s; 
   cursor: pointer;
 }
 
 .menu-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.5);
 }
 
+/* Add this to your CSS file */
+.slide-in {
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.slide {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-sec {
+  opacity: 0;
+  transform: translateY(-40%);
+  transition: transform 1s ease-in-out, opacity 2s ease-in-out;
+}
+
+.slide-sec {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-thi {
+  opacity: 0;
+  transform: translateY(20%);
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.slide-thi {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .icon {
   color: white;
@@ -25,13 +55,11 @@
 .card {
   width: 100px;
   height: 100px;
-  background-color: white;
   padding: 20px;
   border-radius: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 25px 50px px rgb(0 0 0 1);
   transition: transform 0.2s;
 }
 
@@ -40,7 +68,7 @@
 }
 
 .card > .icon {
-  color: #333;
+  color: #fff;
   font-size: 3.5rem;
 }
 
@@ -84,10 +112,21 @@
 }
 
 .paragraph p {
-  border-left: 2px solid #176b87 ; /* Adjust the style as needed */
+  border-left: 2px solid #fff ; /* Adjust the style as needed */
   padding-left: 20px; /* Add padding for the separator */
 }
 
 .proj-icon {
   font-size: 36px; /* Add a zoom transition effect */
 }
+
+.social-icons {
+    font-size: 25px;
+    transition: transform 0.2s; 
+    cursor: pointer; /* Add a zoom transition effect */
+}
+
+.social-icons:hover {
+  transform: scale(1.5); /* Zoom in slightly on hover */
+}
+
