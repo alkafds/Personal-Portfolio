@@ -24,7 +24,7 @@ export default {
         '4x1': '2rem',
       },
       backgroundImage: {
-        'my-background': "url('./src/assets/bg1.jpg')",
+        'my-background': "url('./bg1.jpg')",
       },
   },
   plugins:[],
