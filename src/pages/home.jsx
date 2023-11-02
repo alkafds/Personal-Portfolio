@@ -26,7 +26,6 @@ function Home() {
 
   return (
     <div className={`bg-my-background bg-cover bg-center w-full h-screen relative${pageClass}`}>
-    <Navbar />
     <div className={`transition-opacity duration-1000 ease-in-out ${pageOpen ? "opacity-100" : "opacity-0"}`}>
       <div className="w-full h-screen flex flex-col justify-center items-center text-white">
         <h1 className={`heading text-6xl font-bold slide-in ${pageOpen ? "slide" : ""} `}>Alka Fadilla.</h1>
