@@ -24,7 +24,7 @@ export default {
         '4x1': '2rem',
       },
       backgroundImage: {
-        'my-background': "url('https://im5.ezgif.com/tmp/ezgif-5-4fa6a48103.gif')",
+        'my-background': "url('https://s5.gifyu.com/images/SR7Zx.gif')",
       },
   },
   plugins:[],
