@@ -9,9 +9,9 @@ export default {
       xl: '1440px',
     },
     colors: {
-      'black': '#040D12',
-      'navy': '#183D3D',
-      'teal': '#64ccc5',
+      'black': '#333333',
+      'navy': '#706C61',
+      'teal': '#E1F4F3',
       'mint': '#93B1A6',
       'white': '#ffffff',
     },
@@ -24,7 +24,7 @@ export default {
         '4x1': '2rem',
       },
       backgroundImage: {
-        'my-background': "url('https://i.ibb.co/zN7M4GN/bg1.jpg')",
+        'my-background': "url('https://im5.ezgif.com/tmp/ezgif-5-4fa6a48103.gif')",
       },
   },
   plugins:[],
