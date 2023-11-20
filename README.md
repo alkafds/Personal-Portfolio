@@ -1,9 +1,10 @@
 
 # Personal Frontend Portfolio
-![Screenshot from 2023-10-29 16-02-20](https://github.com/alkafds/Personal-Portfolio/assets/93595804/b6b3e883-0b46-4612-a22d-6cf5229f91c8)
+![PCV SS](https://github.com/alkafds/Personal-Portfolio/assets/93595804/d590660c-0269-41c5-bd79-2c96be781b1e)
+
 
 This is a simple, personal frontend dev portfolio made by me, using React (+ Vite) and Tailwind CSS.
-However, there's no data fetched, so it is a static webpage.
+However, there's no data fetched, so it is a static webpage (I may change it into dynamic page in the future. It's in the plan)
 
 You can try running this in your computer. After you clone this, remember to:
 
