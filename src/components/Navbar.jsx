@@ -122,7 +122,7 @@ export default function Navbar() {
       </div>
 
       <div className='md:hidden'>
-        <FaBars onClick={toggleMenu} className="cursor-pointer"/>
+        <FaBars onClick={toggleMenu} className="cursor-pointer mr-[220px]"/>
       </div>
 
       {isOpen && (
