@@ -7,6 +7,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import { FaXTwitter, FaWhatsapp, FaPencil } from "react-icons/fa6"
 import { GiSkills } from "react-icons/gi";
+import { Link } from 'react-scroll';
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -40,58 +41,165 @@ export default function Navbar() {
     setIsOpen(!isOpen);
   };
 
-  const handleSkills= () => {
-    navigate("/skills")
-  }
-
   return (
-    <div className='fixed w-full h-[80px] flex items-center px-4 bg-transparent text-white font-semibold'>
-      <div className='hidden md:flex justify-between items-center w-full'>
+    <div className='fixed w-full h-[50px] flex justify-center items-center bg-black text-white font-mono font-semibold shadow-xl z-40'>
+      <div className='hidden md:flex'>
         <ul className='flex pl-4 space-x-10 items-end'>
-        <li onClick={handleHome} className="menu-item hover:text-white rounded-2xl">
-            <FaHome />
+        <li>
+          <Link
+            to="About"
+            spy={true}
+            smooth={true}
+            offset={-70} // Adjust this value based on your layout
+            duration={500}
+            className="cursor-pointer"
+          >
+            About
+          </Link>
           </li>
-          <li onClick={handleBio} className="menu-item hover:text-white  rounded-2xl">
-            <FaUser />
+          <li>
+          <Link
+            to="Projects"
+            spy={true}
+            smooth={true}
+            offset={-70} // Adjust this value based on your layout
+            duration={500}
+            className="cursor-pointer"
+          >
+            Projects
+          </Link>
           </li>
-          <li onClick={handleEdu} className="menu-item hover:text-white  rounded-2xl">
-            <FaGraduationCap />
+          <li>
+          <Link
+            to="Experience"
+            spy={true}
+            smooth={true}
+            offset={-70} // Adjust this value based on your layout
+            duration={500}
+            className="cursor-pointer"
+          >
+            Experience
+          </Link>
           </li>
-          <li onClick={handleSkills} className="menu-item hover:text-white rounded-2xl">
-            <GiSkills />
+          <li>
+          <Link
+            to="Skills"
+            spy={true}
+            smooth={true}
+            offset={-70} // Adjust this value based on your layout
+            duration={500}
+            className="cursor-pointer"
+          >
+            Skills
+          </Link>
           </li>
-          <li onClick={handleExperiences} className="menu-item hover:text-white rounded-2xl">
-            <FaBriefcase />
+          <li>
+          <Link
+            to="Education"
+            spy={true}
+            smooth={true}
+            offset={-70} // Adjust this value based on your layout
+            duration={500}
+            className="cursor-pointer"
+          >
+            Education
+          </Link>
           </li>
-          <li onClick={handleProj} className="menu-item hover:text-white rounded-2xl">
-            <FaPencil />
+          <li>
+          <Link
+            to="Contact"
+            spy={true}
+            smooth={true}
+            offset={-70} // Adjust this value based on your layout
+            duration={500}
+            className="cursor-pointer"
+          >
+            Contact
+          </Link>
           </li>
         </ul>
         <div className='flex-grow'></div>
-        
-        <ul className='flex space-x-4 items-end'>
-          <li className="social-icons  hover:text-white px-2 py-1 rounded-2xl"><a href="mailto:fadillaalka@gmail.com"><AiOutlineMail /></a></li>
-          <li className="social-icons  hover:text-white px-2 py-1 rounded-2xl"><a href="https://wa.me/62895400761896"><FaWhatsapp /></a></li>
-          <li className="social-icons  hover:text-white px-2 py-1 rounded-2xl"><a href="https://www.linkedin.com/alka-fadilla/"><FaLinkedinIn /></a></li>
-          <li className="social-icons  hover:text-white px-2 py-1 rounded-2xl"><a href="https://www.instagram.com/alkafds"><FaInstagram /></a></li>
-          <li className="social-icons  hover:text-white px-2 py-1 rounded-2xl"><a href="https://www.twitter.com/alkafdsy"><FaXTwitter /></a></li>
-        </ul>
       </div>
 
       <div className='md:hidden'>
-        <FaBars onClick={toggleMenu} />
+        <FaBars onClick={toggleMenu} className="cursor-pointer"/>
       </div>
 
       {isOpen && (
-        <div className='md:hidden w-full bg-transparent absolute top-[80px] left-0 text-white'>
+        <div className='md:hidden w-full bg-navy absolute top-[50px] left-0 text-white'>
           <ul className='flex flex-col space-y-4 p-4'>
-          <li onClick={handleHome}>Home</li>
-          <li onClick={handleBio}>Bio</li>
-          <li onClick={handleEdu}>Education</li>
-          <li onClick={handleSkills}>Skills</li>
-          <li onClick={handleExperiences}>Skills and Experiences</li>
-          <li onClick={handleProj}>Projects</li>
-          <li onClick={handleCont}>Contact</li>
+          <li>
+          <Link
+            to="About"
+            spy={true}
+            smooth={true}
+            offset={-70} // Adjust this value based on your layout
+            duration={500}
+            className="cursor-pointer"
+          >
+            About
+          </Link>
+          </li>
+          <li>
+          <Link
+            to="Projects"
+            spy={true}
+            smooth={true}
+            offset={-70} // Adjust this value based on your layout
+            duration={500}
+            className="cursor-pointer"
+          >
+            Projects
+          </Link>
+          </li>
+          <li>
+          <Link
+            to="Experience"
+            spy={true}
+            smooth={true}
+            offset={-70} // Adjust this value based on your layout
+            duration={500}
+            className="cursor-pointer"
+          >
+            Experience
+          </Link>
+          </li>
+          <li>
+          <Link
+            to="Skills"
+            spy={true}
+            smooth={true}
+            offset={-70} // Adjust this value based on your layout
+            duration={500}
+            className="cursor-pointer"
+          >
+            Skills
+          </Link>
+          </li>
+          <li>
+          <Link
+            to="Education"
+            spy={true}
+            smooth={true}
+            offset={-70} // Adjust this value based on your layout
+            duration={500}
+            className="cursor-pointer"
+          >
+            Education
+          </Link>
+          </li>
+          <li>
+          <Link
+            to="Contact"
+            spy={true}
+            smooth={true}
+            offset={-70} // Adjust this value based on your layout
+            duration={500}
+            className="cursor-pointer"
+          >
+            Contact
+          </Link>
+          </li>
           </ul>
         </div>
         

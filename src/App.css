@@ -2,48 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-.menu-item {
-  font-size: 24px;
-  transition: transform 0.2s; 
-  cursor: pointer;
+.font-mono {
+  font-family: 'IBM Plex Mono', serif;
 }
 
-.menu-item:hover {
-  transform: scale(1.5);
+.font-playfair {
+  font-family: 'Playfair Display', serif;
 }
 
-/* Add this to your CSS file */
-.slide-in {
-  opacity: 0;
-  transform: translateY(-20%);
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+.carousel-container {
+  width: 600px; /* Adjust as needed */
 }
 
-.slide {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.slide-in-sec {
-  opacity: 0;
-  transform: translateY(-40%);
-  transition: transform 1s ease-in-out, opacity 2s ease-in-out;
-}
-
-.slide-sec {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.slide-in-thi {
-  opacity: 0;
-  transform: translateY(20%);
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-}
-
-.slide-thi {
-  opacity: 1;
-  transform: translateY(0);
+/* Adjust width for large screens (lg) */
+@media (min-width: 992px) {
+  .carousel-container {
+    width: 700px; /* Adjust as needed */
+  }
 }
 
 .icon {
@@ -122,6 +97,7 @@
 
 .social-icons {
     font-size: 25px;
+    color: #333333;
     transition: transform 0.2s; 
     cursor: pointer; /* Add a zoom transition effect */
 }
@@ -130,3 +106,10 @@
   transform: scale(1.5); /* Zoom in slightly on hover */
 }
 
+.view-projects {
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.view-projects:hover {
+  transform: scale(1.1); /* Zoom in slightly on hover */
+}
