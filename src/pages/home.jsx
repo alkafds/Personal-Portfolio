@@ -77,7 +77,7 @@ function Home() {
         >
           <h1
             data-aos="fade-down-right"
-            className="heading text-8xl font-bold font-playfair mt-[80px]"
+            className="heading sm:text-5xl md:text-8xl font-bold font-playfair mt-[80px]"
           >
             ALKA FADILLA
           </h1>
@@ -89,12 +89,12 @@ function Home() {
         >
           <p
             data-aos="fade-down-right"
-            className="subheading sm:text-xl lg:text-2xl font-semibold font-mono mt-[30px]"
+            className="subheading sm:text-md sm:mx-[31px] md:text-xl lg:text-2xl font-semibold font-mono sm:mt-[20px] md:mt-[30px]"
           >
             EDUCATION GRADUATE. KOREAN SPEAKER. WEB DEVELOPER.
           </p>
         </motion.div>
-        <span className="border-b-[1px] border-white absolute top-[270px] transform w-[700px] z-0"></span>
+        <span className="border-b-[1px] border-white absolute lg:top-[270px] transform w-[700px] z-0"></span>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -104,7 +104,7 @@ function Home() {
           <img
             src={profilepic}
             alt="Profile"
-            className="w-32 shadow-xl rounded-full sm:mx-[280px] lg:mx-[620px] mt-[80px]"
+            className="w-32 shadow-xl rounded-full sm:mx-[130px] lg:mx-[620px] sm:mt-[100px] md:mt-[80px]"
           />
           <p
             data-aos="fade-down-right"
@@ -120,7 +120,7 @@ function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >
-            <h1 className="font-bold font-playfair text-5xl mt-[100px] text-center text-white" id="Projects">
+            <h1 className="font-bold font-playfair sm:text-4xl md:text-5xl sm:mt-[50px] md:mt-[100px] text-center text-white" id="Projects">
               LATEST PROJECT
             </h1>
             <div data-aos="fade-down">
@@ -128,7 +128,7 @@ function Home() {
                 showArrows={true}
                 showThumbs={false}
                 infiniteLoop={true}
-                className="carousel-container sm:ml-[130px] lg:ml-[330px] mt-[80px] justify-center items-center self-center"
+                className="carousel-container sm:ml-[228px] lg:ml-[330px] sm:mt-[20px] lg:mt-[80px] justify-center items-center self-center"
               >
                 <div>
                   <img src={MAIN} alt="MAIN" className="sm:w-64 lg:h-41 lg:w-128 lg:h-105" />
@@ -146,18 +146,18 @@ function Home() {
             </div>
             <div className="w-full h-full flex justify-center">
               <p
-                className="text-xl font-bold font-mono mt-[10px] text-left text-white underline underline-offset-4">
+                className="text-xl font-bold font-mono sm:mt-[10px] lg:mt-[10px] text-left text-white underline underline-offset-4">
                 <a href="https://github.com/Bakat-Lacak">
                   Website
                 </a>
               </p>
               <p
-                className="text-xl font-bold font-mono mt-[10px] sm:pl-[400px] lg:pl-[500px] text-center text-white">
+                className="text-xl font-bold font-mono sm:mt-[10px] lg:mt-[20px] sm:pl-[200px] lg:pl-[500px] text-center text-white">
                 July 2023
               </p>
             </div>
             <div className="flex flex-col items-center justify-center">
-              <h2 className="text-4xl text-white mt-[40px] mx-[330px] text-justify text-white font-playfair font-bold">
+              <h2 className="text-4xl text-white sm:mt-[20px] lg:mt-[40px] mx-[330px] text-justify text-white font-playfair font-bold">
                 BakatLacak
               </h2>
               <p
@@ -206,7 +206,7 @@ function Home() {
             </h4>
             <p
               data-aos="fade-down-right"
-              className="text-lg text-bold font-mono mt-[40px] mx-[100px] text-center">
+              className="text-lg text-bold font-mono mt-[40px] sm:mx-[10px] md:mx-[100px] text-center">
               Teamwork | Creativity | Time Management | Event Organizing
             </p>
           </motion.div>
@@ -226,7 +226,7 @@ function Home() {
             </h4>
             <p
               data-aos="fade-down-right"
-              className="text-lg text-bold font-mono mt-[40px] mx-[100px] text-center">
+              className="text-lg text-bold font-mono mt-[40px] sm:mx-[10px] md:mx-[100px] text-center">
               Lesson plan preparation | Syllabus creation  Teaching | Assessment
             </p>
           </motion.div>
@@ -246,7 +246,7 @@ function Home() {
             </h4>
             <p
               data-aos="fade-down-right"
-              className="text-lg text-bold font-mono mt-[40px] mx-[100px] text-center">
+              className="text-lg text-bold font-mono mt-[40px] sm:mx-[10px] md:mx-[100px] text-center">
               Frontend Web Development | Unit Testing | Deployment
             </p>
           </motion.div>
@@ -277,7 +277,7 @@ function Home() {
           </h2>
           <p
             data-aos="fade-down-right"
-            className="text-lg text-bold font-mono mt-[40px] sm:mx-[100px] lg:mx-[330px] text-justify">
+            className="text-lg text-bold font-mono mt-[40px] sm:mx-[50px] lg:mx-[330px] text-justify">
             {formattedDevSum}
           </p>
 
@@ -286,7 +286,7 @@ function Home() {
           </h2>
           <p
             data-aos="fade-down-right"
-            className="text-lg text-bold font-mono mt-[40px] sm:mx-[100px] lg:mx-[330px] text-justify">
+            className="text-lg text-bold font-mono mt-[40px] sm:mx-[50px] lg:mx-[330px] text-justify">
             {formattedlangSum}
           </p>
           <h2 className="text-2xl font-semibold font-mono mt-[60px] text-center">
@@ -294,12 +294,12 @@ function Home() {
           </h2>
           <p
             data-aos="fade-down-right"
-            className="text-lg text-bold font-mono mt-[40px] sm:mx-[100px] lg:mx-[330px] text-justify">
+            className="text-lg text-bold font-mono mt-[40px] sm:mx-[50px] lg:mx-[330px] text-justify">
             {eduSummary}
           </p>
         </motion.div>
       </div>
-      <span className="border-b-[1px] border-white absolute sm:top-[4200px] lg:top-[3900px] transform w-[700px] z-0"></span>
+      <span className="border-b-[1px] border-white absolute sm:top-[4750px] lg:top-[3900px] transform w-[700px] z-0"></span>
       <div className="bg-black bg-opacity-20 flex flex-col items-center text-white w-full h-full ">
           <h1 className="font-bold font-playfair text-5xl mt-[20px] mb-[20px] mx-[400px] text-center text-white" id="Education">
             EDUCATION
@@ -332,11 +332,11 @@ function Home() {
         </h4>
         <p
           data-aos="fade-down-right"
-          className="text-lg text-bold font-mono mt-[20px] lg:mx-[300px] text-center">
+          className="text-lg text-bold font-mono mt-[20px] sm:mx-[10px] lg:mx-[300px] text-center">
           HTML5 & CSS3 | NodeJS | ExpressJS | PostgreSQL | ReactJS | NextJS | CI/CD Pipeline | Git
         </p>
 
-        <span className="border-b-[1px] border-white absolute sm:top-[4950px] lg:top-[4680px] transform w-[700px] z-0 justi"></span>
+        <span className="border-b-[1px] border-white absolute sm:top-[5720px] lg:top-[4680px] transform w-[700px] z-0 justi"></span>
       </div>
       <div className="bg-black bg-opacity-20 flex flex-col justify-center items-center text-white mb-[20px] w-full h-full" >
       <h1 className="font-bold font-playfair text-5xl justify-center items-center text-white mt-[110px]" id="Contact">
